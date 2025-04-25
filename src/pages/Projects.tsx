@@ -15,7 +15,7 @@ const projects = [
     description:
       'Automation scripts for Google services using Google Apps Script.',
     githubUrl: 'https://github.com/ADIMYY/Google_Script',
-    tech: ['Google Apps Script', 'JavaScript'],
+    tech: ['oauth2', 'Node.js', 'Google Sheets API', 'Google Drive API'],
   },
   {
     title: 'E-commerce Platform',
