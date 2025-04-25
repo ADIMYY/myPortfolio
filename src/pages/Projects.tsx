@@ -11,6 +11,13 @@ const projects = [
     tech: ['Node.js', 'MongoDB', 'Express', 'JWT'],
   },
   {
+    title: 'Google Script',
+    description:
+      'Automation scripts for Google services using Google Apps Script.',
+    githubUrl: 'https://github.com/ADIMYY/Google_Script',
+    tech: ['Google Apps Script', 'JavaScript'],
+  },
+  {
     title: 'E-commerce Platform',
     description:
       'Full-featured e-commerce platform with user authentication, product management, shopping cart, and payment integration.',
@@ -37,13 +44,6 @@ const projects = [
       'Weather application that provides real-time weather information using external APIs.',
     githubUrl: 'https://github.com/ADIMYY/Node.js-Weather-API',
     tech: ['Node.js', 'Express', 'API Integration'],
-  },
-  {
-    title: 'Google Script',
-    description:
-      'Automation scripts for Google services using Google Apps Script.',
-    githubUrl: 'https://github.com/ADIMYY/Google_Script',
-    tech: ['Google Apps Script', 'JavaScript'],
   },
 ];
 

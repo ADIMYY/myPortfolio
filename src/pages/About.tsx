@@ -1,5 +1,6 @@
-import { Container, Typography, Box, Paper } from '@mui/material';
+import { Container, Typography, Box, Paper, Button } from '@mui/material';
 import { motion } from 'framer-motion';
+import { GitHub as GitHubIcon } from '@mui/icons-material';
 
 const About = () => {
   return (
@@ -20,20 +21,47 @@ const About = () => {
         >
           About Me
         </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: 'secondary.main',
-            mb: 4,
-            fontSize: '1.2rem',
-            lineHeight: 1.8,
-          }}
-        >
-          I am a passionate backend developer with a strong foundation in computer
-          science fundamentals and a keen interest in building scalable,
-          efficient, and maintainable systems. My expertise lies in Node.js
-          development, database design, and creating robust RESTful APIs.
-        </Typography>
+        
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mb: 4 }}>
+          <Box
+            component="img"
+            src="https://res.cloudinary.com/dyd5lvwhc/image/upload/v1745571012/photo_2025-04-17_15-57-21_vbjuii.jpg"
+            alt="Profile"
+            sx={{
+              width: { xs: '100%', md: '300px' },
+              height: { xs: '300px', md: '300px' },
+              objectFit: 'cover',
+              borderRadius: '8px',
+              boxShadow: 3,
+            }}
+          />
+          <Box sx={{ flex: 1 }}>
+            <Typography
+              variant="body1"
+              sx={{
+                color: 'secondary.main',
+                mb: 4,
+                fontSize: '1.2rem',
+                lineHeight: 1.8,
+              }}
+            >
+              I am a passionate backend developer with a strong foundation in computer
+              science fundamentals and a keen interest in building scalable,
+              efficient, and maintainable systems. My expertise lies in Node.js
+              development, database design, and creating robust RESTful APIs.
+            </Typography>
+            <Button
+              variant="outlined"
+              startIcon={<GitHubIcon />}
+              href="https://github.com/ADIMYY"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ mt: 2 }}
+            >
+              Visit My GitHub
+            </Button>
+          </Box>
+        </Box>
       </Box>
 
       <Box sx={{ mt: 4, display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>

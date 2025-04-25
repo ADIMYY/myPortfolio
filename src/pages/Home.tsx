@@ -28,41 +28,77 @@ const Home = () => {
         sx={{
           minHeight: '80vh',
           display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: 'center',
+          justifyContent: 'space-between',
           gap: 4,
+          py: 4,
         }}
       >
-        <Typography
-          variant="h1"
+        {/* Text Content */}
+        <Box sx={{ flex: 1 }}>
+          <Typography
+            variant="h1"
+            sx={{
+              color: 'primary.main',
+              fontSize: { xs: '2.5rem', md: '4rem' },
+            }}
+          >
+            Hi, I'm Abdelrahman Ali
+          </Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              color: 'secondary.main',
+              fontSize: { xs: '1.5rem', md: '2.5rem' },
+              mt: 2,
+            }}
+          >
+            Backend Developer & Problem Solver
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: '600px',
+              color: 'secondary.main',
+              fontSize: '1.2rem',
+              mt: 3,
+            }}
+          >
+            I specialize in building robust backend systems and solving complex
+            programming challenges. With expertise in Node.js, MongoDB, and
+            TypeScript, I create scalable and efficient solutions.
+          </Typography>
+        </Box>
+
+        {/* Photo */}
+        <Box
+          component={motion.div}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           sx={{
-            color: 'primary.main',
-            fontSize: { xs: '2.5rem', md: '4rem' },
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
-          Hi, I'm ADIMYY
-        </Typography>
-        <Typography
-          variant="h2"
-          sx={{
-            color: 'secondary.main',
-            fontSize: { xs: '1.5rem', md: '2.5rem' },
-          }}
-        >
-          Backend Developer & Problem Solver
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            maxWidth: '600px',
-            color: 'secondary.main',
-            fontSize: '1.2rem',
-          }}
-        >
-          I specialize in building robust backend systems and solving complex
-          programming challenges. With expertise in Node.js, MongoDB, and
-          TypeScript, I create scalable and efficient solutions.
-        </Typography>
+          <Box
+            component="img"
+            src="https://res.cloudinary.com/dyd5lvwhc/image/upload/v1745571012/photo_2025-04-17_15-57-21_vbjuii.jpg"
+            alt="ADIMYY"
+            sx={{
+              width: { xs: '100%', md: '400px' },
+              height: { xs: '300px', md: '400px' },
+              objectFit: 'cover',
+              borderRadius: '20px',
+              boxShadow: 3,
+              border: '2px solid',
+              borderColor: 'primary.main',
+            }}
+          />
+        </Box>
       </Box>
 
       {/* Skills Section */}
