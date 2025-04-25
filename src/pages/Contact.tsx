@@ -1,49 +1,27 @@
-import { useState } from 'react';
-import {
-  Container,
-  Typography,
-  Box,
-  TextField,
-  Button,
-  Paper,
-  Grid,
-  IconButton,
-} from '@mui/material';
+import { Container, Typography, Box, Paper, Grid, IconButton } from '@mui/material';
 import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form submitted:', formData);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   return (
-    <Container maxWidth="lg" sx={{ py: 8 }}>
+    <Container 
+      maxWidth={false} 
+      sx={{ 
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        p: 0,
+      }}
+    >
       <Box
         component={motion.div}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        sx={{ textAlign: 'center', mb: 4 }}
       >
         <Typography
           variant="h2"
@@ -62,125 +40,54 @@ const Contact = () => {
             mb: 6,
             fontSize: '1.2rem',
             maxWidth: '600px',
+            mx: 'auto',
           }}
         >
           I'm currently open to new opportunities and would love to hear from you.
-          Whether you have a question or just want to say hi, feel free to reach
-          out!
+          Feel free to connect with me through any of these platforms!
         </Typography>
       </Box>
 
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
-          <Paper
-            component={motion.form}
-            onSubmit={handleSubmit}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            sx={{
-              p: 4,
-              backgroundColor: 'background.paper',
-            }}
-          >
-            <TextField
-              fullWidth
-              label="Name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              margin="normal"
-              required
-              sx={{
-                '& .MuiOutlinedInput-root': {
-                  color: 'secondary.main',
-                },
-                '& .MuiInputLabel-root': {
-                  color: 'secondary.main',
-                },
-              }}
-            />
-            <TextField
-              fullWidth
-              label="Email"
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              margin="normal"
-              required
-              sx={{
-                '& .MuiOutlinedInput-root': {
-                  color: 'secondary.main',
-                },
-                '& .MuiInputLabel-root': {
-                  color: 'secondary.main',
-                },
-              }}
-            />
-            <TextField
-              fullWidth
-              label="Message"
-              name="message"
-              multiline
-              rows={4}
-              value={formData.message}
-              onChange={handleChange}
-              margin="normal"
-              required
-              sx={{
-                '& .MuiOutlinedInput-root': {
-                  color: 'secondary.main',
-                },
-                '& .MuiInputLabel-root': {
-                  color: 'secondary.main',
-                },
-              }}
-            />
-            <Button
-              type="submit"
-              variant="contained"
-              sx={{
-                mt: 2,
-                backgroundColor: 'primary.main',
-                color: 'background.default',
-                '&:hover': {
-                  backgroundColor: 'primary.dark',
-                },
-              }}
-            >
-              Send Message
-            </Button>
-          </Paper>
-        </Grid>
-
-        <Grid item xs={12} md={6}>
+      <Grid 
+        container 
+        justifyContent="center" 
+        alignItems="center" 
+        sx={{ 
+          flex: 1,
+          width: '100%',
+          m: 0,
+        }}
+      >
+        <Grid item xs={12}>
           <Paper
             component={motion.div}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            elevation={0}
             sx={{
-              p: 4,
-              height: '100%',
+              p: 6,
               backgroundColor: 'background.paper',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
+              borderRadius: 0,
+              minHeight: '50vh',
+              width: '100%',
             }}
           >
             <Typography
               variant="h3"
               sx={{
                 color: 'primary.main',
-                mb: 4,
-                fontSize: '1.8rem',
+                mb: 6,
+                fontSize: '2.2rem',
               }}
             >
               Connect With Me
             </Typography>
-            <Box sx={{ display: 'flex', gap: 3 }}>
+            <Box sx={{ display: 'flex', gap: 4 }}>
               <IconButton
                 href="https://github.com/ADIMYY"
                 target="_blank"
@@ -192,21 +99,10 @@ const Contact = () => {
                   },
                 }}
               >
-                <GitHubIcon sx={{ fontSize: 40 }} />
+                <GitHubIcon sx={{ fontSize: 50 }} />
               </IconButton>
               <IconButton
-                href="mailto:your.email@example.com"
-                sx={{
-                  color: 'primary.main',
-                  '&:hover': {
-                    color: 'secondary.main',
-                  },
-                }}
-              >
-                <EmailIcon sx={{ fontSize: 40 }} />
-              </IconButton>
-              <IconButton
-                href="https://linkedin.com/in/your-profile"
+                href="https://linkedin.com/in/abdelrahman-ali-a63464246/"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
@@ -216,7 +112,20 @@ const Contact = () => {
                   },
                 }}
               >
-                <LinkedInIcon sx={{ fontSize: 40 }} />
+                <LinkedInIcon sx={{ fontSize: 50 }} />
+              </IconButton>
+              <IconButton
+                href="https://wa.me/+201099858459"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: 'primary.main',
+                  '&:hover': {
+                    color: 'secondary.main',
+                  },
+                }}
+              >
+                <WhatsAppIcon sx={{ fontSize: 50 }} />
               </IconButton>
             </Box>
           </Paper>
