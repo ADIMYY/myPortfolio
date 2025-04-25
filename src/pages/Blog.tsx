@@ -4,7 +4,7 @@ const Blog = () => {
   const blogPosts = [
     {
       title: 'Kaapa visitor assistant (Tawaf)',
-      description: 'Provides essential information for performing Umrah.',
+      description: 'A comprehensive Islamic application providing prayer times, adhan notifications, and mosque-related services. Built with Express.js and MongoDB, featuring user authentication, file uploads, and email notifications.',
       date: 'April 2024',
       technologies: ['NodeJs', 'MongoDB', 'Express']
     },
