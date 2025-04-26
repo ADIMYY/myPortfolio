@@ -20,11 +20,14 @@ const Blog = () => {
   ];
 
   return (
-    <Container maxWidth="lg" sx={{ py: 8, overflowX: 'hidden' }}>
-      <Typography variant="h2" component="h1" gutterBottom>
+    <Container maxWidth="lg" sx={{ pb: 24, overflowX: 'hidden' }}>
+      <Typography variant="h2" sx={{
+          color: 'primary.main',
+          mt: 8,
+        }}>
         Latest Developments
       </Typography>
-      <Typography variant="body1" color="secondary" paragraph>
+      <Typography variant="body1" color="secondary" paragraph sx={{ fontSize: '1.2rem' }}>
         Stay updated with my latest projects and developments
       </Typography>
       
