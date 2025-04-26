@@ -20,7 +20,7 @@ const Blog = () => {
   ];
 
   return (
-    <Container maxWidth="lg" sx={{ py: 8 }}>
+    <Container maxWidth="lg" sx={{ py: 8, overflowX: 'hidden' }}>
       <Typography variant="h2" component="h1" gutterBottom>
         Latest Developments
       </Typography>
