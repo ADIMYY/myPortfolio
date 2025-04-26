@@ -1,6 +1,9 @@
 import { Container, Typography, Card, CardContent, Grid } from '@mui/material';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Blog = () => {
+  usePageTitle('Blog');
+
   const blogPosts = [
     {
       title: 'Kaapa visitor assistant (Tawaf)',

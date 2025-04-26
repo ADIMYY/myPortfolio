@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Contact = () => {
+  usePageTitle('Contact');
+
   return (
     <Container 
       maxWidth={false} 

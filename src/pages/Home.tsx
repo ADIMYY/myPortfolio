@@ -1,5 +1,6 @@
 import { Box, Container, Typography, Grid, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
+import usePageTitle from '../hooks/usePageTitle';
 
 const skills = [
   {
@@ -17,6 +18,8 @@ const skills = [
 ];
 
 const Home = () => {
+  usePageTitle('Home');
+
   return (
     <Container maxWidth="lg">
       {/* Hero Section */}

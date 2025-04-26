@@ -1,6 +1,7 @@
 import { Container, Typography, Grid, Card, CardContent, CardActions, Button, Box } from '@mui/material';
 import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import usePageTitle from '../hooks/usePageTitle';
 
 const projects = [
   {
@@ -48,6 +49,7 @@ const projects = [
 ];
 
 const Projects = () => {
+  usePageTitle('Projects');
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
       <Typography

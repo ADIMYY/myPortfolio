@@ -53,7 +53,7 @@ const Navbar = () => {
           component="div"
           sx={{ flexGrow: 1, color: 'primary.main' }}
         >
-          ADIMYY
+          ADIMY
         </Typography>
 
         {isMobile ? (

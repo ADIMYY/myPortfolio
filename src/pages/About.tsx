@@ -1,8 +1,11 @@
 import { Container, Typography, Box, Paper, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import { GitHub as GitHubIcon } from '@mui/icons-material';
+import usePageTitle from '../hooks/usePageTitle';
 
 const About = () => {
+  usePageTitle('About');
+
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
       <Box
