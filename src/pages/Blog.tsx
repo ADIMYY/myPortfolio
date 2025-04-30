@@ -15,7 +15,7 @@ const Blog = () => {
       title: 'Google Script (Naqqas)',
       description: 'A Node.js API that integrates with Google Sheets and Google Drive to manage medication data and orders.',
       date: 'April 2024',
-      technologies: ['Google Apps Script', 'JavaScript']
+      technologies: ['JavaScript']
     }
   ];
 
